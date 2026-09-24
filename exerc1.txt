@@ -1,0 +1,37 @@
+#include <stdio.h>
+int main(){
+    float nota1, nota2, nota3, media;
+    float peso1, peso2, peso3;
+    
+    
+    printf("Digite a primeira nota: ");
+    scanf("%f", &nota1);
+    printf("Digite o primeiro peso: ");
+    scanf("%f", &peso1);
+
+    printf("Digite a segunda nota: ");
+    scanf("%f", &nota2);
+    printf("Digite o segundo peso: ");
+    scanf("%f", &peso2);
+
+    printf("Digite a terceira nota: ");
+    scanf("%f", &nota3);
+    printf("Digite o terceiro peso: ");
+    scanf("%f", &peso3);
+
+    if(peso1 == 0 || peso2 == 0 || peso3 == 0){
+        printf("Digite um peso válido!!");
+    }
+    
+    media = (nota1 * peso1 + nota2 * peso2 + nota3 * peso3) / (peso1 + peso2 + peso3);
+    
+    if(media > 6){
+        printf("Aprovado!! %f", media);
+    } else if (media >= 5 || media <= 6){
+        printf("Recuperação! %f", media);
+    } else if(media < 5){
+        printf("Reprovado! %f" media);
+    }    
+      
+    return 0;
+}
