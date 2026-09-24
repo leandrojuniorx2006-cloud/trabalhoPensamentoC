@@ -1,0 +1,24 @@
+		#include <stdio.h>
+FAIXA NUMERICA
+
+int main() {
+    int numero;
+    int tentativas = 0; 
+
+    do {
+        printf("Digite um numero de 1 a 100: ");
+        scanf("%d", &numero); 
+
+        tentativas++; // ACUMULADOR KRL 
+        if (numero < 1 || numero > 100) {
+            printf("Valor invalido! Tente um valor entre 1 e 100.\n\n");
+        }
+        
+    } while (numero < 1 || numero > 100);
+
+    
+    printf("\nParabens! Voce digitou um numero valido: %d\n", numero);
+    printf("Tentativas necessarias: %d\n", tentativas);
+
+    return 0;
+}
