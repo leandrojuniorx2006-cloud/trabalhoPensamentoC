@@ -1,2 +1,2 @@
 # trabalhoPensamentoC
-Primeiro trabalho em C Owls Help
+Primeiro trabalho em C Owls Company
