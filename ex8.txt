@@ -2,7 +2,7 @@
 
 int main() {
     int opcao = 0;
-    float num1, num2, resultado;
+    float num1, num2, resultado; //numero faixa
 
     
     while (opcao != 5) {
