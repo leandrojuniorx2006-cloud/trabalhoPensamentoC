@@ -2,7 +2,7 @@
 FAIXA NUMERICA
 
 int main() {
-    int numero;
+    int numero;// #
     int tentativas = 0; 
 
     do {
