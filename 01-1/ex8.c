@@ -7,7 +7,7 @@ int main() {
     
     while (opcao != 5) {
         
-        printf("\n=============================\n");
+        printf("\n=============================\n"); // #
         printf("    CALCULADORA EM C\n");
         printf("=============================\n");
         printf("1 - Soma\n");
