@@ -1,0 +1,60 @@
+#include <stdio.h>
+
+int main() {
+    int opcao = 0;
+    float num1, num2, resultado;
+
+    
+    while (opcao != 5) {
+        
+        printf("\n=============================\n");
+        printf("    CALCULADORA EM C\n");
+        printf("=============================\n");
+        printf("1 - Soma\n");
+        printf("2 - Subtração\n");
+        printf("3 - Multiplicação\n");
+        printf("4 - Divisão\n");
+        printf("5 - Sair\n");
+        printf("Escolha uma opção: ");
+        scanf("%d", &opcao);
+//usando .f eu 
+    
+        if (opcao >= 1 && opcao <= 4) {
+            
+            printf("Digite o primeiro número: ");
+            scanf("%f", &num1);
+            printf("Digite o segundo número: ");
+            scanf("%f", &num2);
+
+            if (opcao == 1) {
+                resultado = num1 + num2;
+                printf("Resultado: %.2f + %.2f = %.2f\n", num1, num2, resultado);
+            } 
+            else if (opcao == 2) {
+                resultado = num1 - num2;
+                printf("Resultado: %.2f - %.2f = %.2f\n", num1, num2, resultado);
+            } 
+            else if (opcao == 3) {
+                resultado = num1 * num2;
+                printf("Resultado: %.2f * %.2f = %.2f\n", num1, num2, resultado);
+            } 
+            else if (opcao == 4) {
+                
+                if (num2 == 0) {
+                    printf("Erro: Não é possível dividir por zero!\n");
+                } else {
+                    resultado = num1 / num2;
+                    printf("Resultado: %.2f / %.2f = %.2f\n", num1, num2, resultado);
+                }
+            }
+        } 
+        else if (opcao == 5) {
+            printf("\nSaindo da calculadora... Até logo!\n");
+        } 
+        else {
+            printf("\nOpção inválida! Por favor, escolha um número de 1 a 5.\n");
+        }
+    }
+
+    return 0;
+}
