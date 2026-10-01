@@ -8,7 +8,7 @@ int main() {
     while (true){
         printf("Digite um numero: ");
         scanf("%d", &numero);
-        for (int contador = 1; contador <= 10; contador++) {
+        for (int contador = 1; contador <= 10; contador++) 
             printf("%d x %d = %d\n",
                    numero,
                    contador,
