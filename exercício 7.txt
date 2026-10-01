@@ -1,0 +1,30 @@
+exercício 7:
+
+
+#include <stdio.h>
+ 
+int main() {
+    int numero, primo = 1;
+ 
+    printf("Digite um número positivo: ");
+    scanf("%d", &numero);
+ 
+    if (numero < 2) {
+        primo = 0;
+    }
+ 
+    for (int i = 2; i < numero; i++) {
+        if (numero % i == 0) {
+            primo = 0;
+            break;
+        }
+    }
+ 
+    if (primo) {
+        printf("%d é primo.\n", numero);
+    } else {
+        printf("%d não é primo.\n", numero);
+    }
+ 
+    return 0;
+}
