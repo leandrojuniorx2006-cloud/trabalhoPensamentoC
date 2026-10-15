@@ -4,7 +4,7 @@ int main() {
     int matricula = 12345;
     float estatura = 1.75;
     char inicial = 'J';
-    char curso[50] = "Ciencia da Computacao";
+    char curso[50] = "";
 
     printf("Matricula: %d\n", matricula);
     printf("Estatura: %.2f\n", estatura);
