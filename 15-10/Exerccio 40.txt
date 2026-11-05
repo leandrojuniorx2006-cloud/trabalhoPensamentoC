@@ -1,0 +1,25 @@
+Exercício 40:
+
+#include <stdio.h>
+
+int main() {
+    int a1, r, N, i, termo;
+
+    printf("Digite o primeiro termo: ");
+    scanf("%d", &a1);
+    printf("Digite a razao: ");
+    scanf("%d", &r);
+    printf("Digite a quantidade de termos: ");
+    scanf("%d", &N);
+
+    for (i = 0; i < N; i++) {
+        termo = a1 + (i * r);
+        printf("%d", termo);
+        if (i < N - 1) {
+            printf(", ");
+        }
+    }
+    printf("\n");
+
+    return 0;
+}

@@ -1,0 +1,36 @@
+Exercício 46:
+
+#include <stdio.h>
+
+int main() {
+    int idade, maiorIdade = 0, contador = 0;
+    float salario, somaSalarios = 0;
+
+    printf("Digite a idade (negativa para encerrar): ");
+    scanf("%d", &idade);
+
+    while (idade >= 0) {
+        printf("Digite o salario: ");
+        scanf("%f", &salario);
+
+        somaSalarios = somaSalarios + salario;
+        contador = contador + 1;
+
+        if (idade > maiorIdade) {
+            maiorIdade = idade;
+        }
+
+        printf("Digite a idade (negativa para encerrar): ");
+        scanf("%d", &idade);
+    }
+
+    if (contador > 0) {
+        printf("Entrevistados: %d\n", contador);
+        printf("Media salarial: %.2f\n", somaSalarios / contador);
+        printf("Maior idade: %d\n", maiorIdade);
+    } else {
+        printf("Nenhum cidadao foi entrevistado.\n");
+    }
+
+    return 0;
+}

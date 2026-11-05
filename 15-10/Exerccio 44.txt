@@ -1,0 +1,19 @@
+Exercício 44:
+
+#include <stdio.h>
+
+int main() {
+    int n, contador = 0;
+
+    printf("Digite um numero inteiro maior que 1: ");
+    scanf("%d", &n);
+
+    while (n > 1) {
+        n = n / 2;
+        contador = contador + 1;
+    }
+
+    printf("Quantidade de divisoes por 2: %d\n", contador);
+
+    return 0;
+}

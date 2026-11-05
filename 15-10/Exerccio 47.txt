@@ -1,0 +1,20 @@
+Exercício 47:
+
+#include <stdio.h>
+
+int main() {
+    float popA = 80000, popB = 100000;
+    int anos = 0;
+
+    while (popA <= popB) {
+        popA = popA + popA * 0.03;
+        popB = popB + popB * 0.015;
+        anos = anos + 1;
+    }
+
+    printf("Anos necessarios: %d\n", anos);
+    printf("Populacao do pais A: %.0f\n", popA);
+    printf("Populacao do pais B: %.0f\n", popB);
+
+    return 0;
+}

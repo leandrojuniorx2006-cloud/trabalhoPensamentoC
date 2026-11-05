@@ -1,0 +1,31 @@
+Exercício 43:
+
+#include <stdio.h>
+
+int main() {
+    int N, i;
+    float nota1, nota2, media, somaMedias = 0;
+
+    printf("Quantidade de alunos: ");
+    scanf("%d", &N);
+
+    for (i = 1; i <= N; i++) {
+        printf("\nAluno %d - Digite as duas notas: ", i);
+        scanf("%f %f", &nota1, &nota2);
+
+        media = (nota1 + nota2) / 2;
+        printf("Media: %.2f\n", media);
+
+        if (media >= 6.0) {
+            printf("Aprovado\n");
+        } else {
+            printf("Reprovado\n");
+        }
+
+        somaMedias = somaMedias + media;
+    }
+
+    printf("\nMedia da turma: %.2f\n", somaMedias / N);
+
+    return 0;
+}

@@ -1,0 +1,50 @@
+Exercício 48:
+
+#include <stdio.h>
+
+int main() {
+    int codigo, formaPagamento;
+    float preco, total = 0, valorFinal, valorEntregue, troco;
+
+    printf("Codigo do item (0 para finalizar): ");
+    scanf("%d", &codigo);
+
+    while (codigo != 0) {
+        printf("Preco unitario: ");
+        scanf("%f", &preco);
+
+        total = total + preco;
+
+        printf("Codigo do item (0 para finalizar): ");
+        scanf("%d", &codigo);
+    }
+
+    printf("\nTotal bruto: R$ %.2f\n", total);
+
+    printf("Forma de pagamento (1 - Dinheiro, 2 - Cartao): ");
+    scanf("%d", &formaPagamento);
+
+    if (formaPagamento == 1) {
+        valorFinal = total * 0.95;
+        printf("Desconto de 5%% aplicado.\n");
+        printf("Valor a pagar: R$ %.2f\n", valorFinal);
+
+        printf("Valor entregue: ");
+        scanf("%f", &valorEntregue);
+
+        troco = valorEntregue - valorFinal;
+        printf("Troco: R$ %.2f\n", troco);
+    } else if (formaPagamento == 2) {
+        valorFinal = total;
+        printf("Valor a pagar no cartao: R$ %.2f\n", valorFinal);
+    } else {
+        printf("Forma de pagamento invalida.\n");
+        valorFinal = total;
+    }
+
+    printf("\n=== EXTRATO ===\n");
+    printf("Total bruto: R$ %.2f\n", total);
+    printf("Total pago:  R$ %.2f\n", valorFinal);
+
+    return 0;
+}
